@@ -1,0 +1,170 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Disaster Preparedness</title>
+    <style>
+        .container {
+            background-image: url('/static/Images/Home disaster preparedness.jpg');
+            background-size: cover;
+            background-repeat: no-repeat;
+            background-attachment: fixed;
+            background-position: center;
+            height: 200vh;
+            width: 100%;
+            position: absolute;
+
+
+        }
+        body {
+            font-family: 'Arial', sans-serif;
+            margin: 0;
+            padding: 0;
+            background: url('') center/cover no-repeat fixed;
+            color: #333; /* Darker text color for better visibility */
+        }
+
+        header {
+            background-color: ;
+            color: blue;
+            padding: 20px;
+            text-align: center;
+            top: 10px;
+        }
+
+        .card {
+            background-color:#E0FFFF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 40px;
+            margin: 500px;
+            margin-top: 00px;
+            text-align: left;
+            margin-bottom: 10px;
+        }
+        .card1 {
+            background-color:#E0FFFF;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+            padding: 250px;
+            margin: 300px;
+            margin-bottom: 10px;
+            margin-top: 10px;
+            text-align: left;
+            padding-top: 10px;
+        }
+
+
+        h2 {
+            color: #007BFF;
+        }
+
+        .emergency-kit,
+        .community-involvement,
+        .evacuation-planning {
+            background-color:;
+            border-radius: 5px;
+            margin-top: 15px;
+            padding: 15px;
+        }
+
+        .footer {
+            background-color: rgba(0, 0, 0, 0.7);
+            color: #fff;
+            text-align: center;
+            padding: 10px;
+            position: ;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+
+<div class="container">
+    <header>
+        <h2><p><strong>Be Ready, Stay Safe</strong></p></h2>
+       
+    </header>
+    <div class="card1">
+     <div class = "infor">
+        <h2>What is it?</h2>
+            <p>Disaster preparedness is a critical part of community resilience. By taking steps to prepare for potential disasters, you can help protect your family and community from harm. This website provides information and resources to help you develop a disaster preparedness plan for your household or community.</p>
+     </div>
+     <div class = "infor">
+        <h2>Why is this important?</h2>
+            <p>With increasing population growth, rapid and unplanned urbanisation, climate change, environmental degradation and widespread poverty, a growing number of people and assets are exposed to disasters.</br>
+
+                Moreover, many of these events occur in fragile and conflict-affected states, thus increasing the complexity of crises and overburdening countries experiencing violent conflict or fragile governance.</br>
+                
+                However, improved practice and response mechanisms save lives and strengthen the countries and communities’ ability to reduce the impact of disasters.</br>
+                
+                Understanding the occurrence and frequency of natural hazards, as well as the risks, vulnerabilities and potential impact on people and assets, helps to improve preparedness.</br>
+                
+                Instead of providing emergency response only, international efforts should help governments and communities invest in understanding risks and building preparedness capacities for pre-emptive and early action. Disaster preparedness is cost-effective and saves aid money.</p>
+     </div>
+
+ 
+
+        <h2> Ways of Disaster Preparedness</h2>
+
+        <section>
+            <h3>Risk Assessment</h3>
+            <p>Identify potential hazards and assess their impact on your community.</p>
+        </section>
+
+        <section>
+            <h3>Emergency Plan</h3>
+            <p>Develop and practice an emergency plan with your family or community members.</p>
+        </section>
+
+        <section>
+            <h3>Emergency Kit</h3>
+            <p>Create and maintain an emergency kit with essential supplies.</p>
+            <div class="emergency-kit">
+                <strong>Emergency Kit Checklist:</strong>
+                <ul>
+                    <li>Water</li>
+                    <li>Non-perishable food</li>
+                    <li>First aid supplies</li>
+                    <li>Flashlight and batteries</li>
+                    <li>Important documents</li>
+                </ul>
+            </div>
+        </section>
+
+        <section>
+            <h3>Communication Plan</h3>
+            <p>Establish a communication plan with family members and neighbors.</p>
+        </section>
+
+        <section>
+            <h3>Community Involvement</h3>
+            <p>Get involved in local disaster preparedness efforts and community events.</p>
+            <div class="community-involvement">
+                <strong>Upcoming Event:</strong>
+                <p>Join us for a disaster preparedness workshop on [Date].</p>
+            </div>
+        </section>
+
+        <section>
+            <h3>Evacuation Planning</h3>
+            <p>Know evacuation routes and plan for the needs of your household, including pets.</p>
+            <div class="evacuation-planning">
+                <strong>Pet Preparedness:</strong>
+                <p>Ensure you have pet carriers, food, and medical supplies for your pets.</p>
+            </div>
+        </section>
+    </div>
+
+    <footer class="footer">
+        <p>&copy; 2024 Disaster Preparedness Project. All rights reserved.</p>
+    </footer>
+</div>
+
+{% endblock %}
+
+
+

@@ -1,0 +1,251 @@
+{% load static %}
+   <!DOCTYPE html>
+   <html lang="en">
+    <head>
+         <meta charset="UTF-8">
+         <meta http-equiv="X-UA-Compatible" content="IE=edge">
+         <meta name="viewport" content="width=device-width, initial-scale=1.0">
+         <title>{% block title %}Disaster Preparedness{% endblock %}</title>
+    </head>
+<!-- Include your CSS stylesheets or external links here -->
+<body>
+    <div class="user sticky-top">
+        <h1 style="text-align:center;">
+            <a href="http://127.0.0.1:5000/home/" style="color:blue;">
+                <img src="{% static '/Images/Logo.webp' %}" alt="Disaster Logo" style="height: 160px; width: 160px; border-radius:50%"><br><br>
+                Community-based Disaster Preparedness
+            </a>
+        </h1>
+
+        <style>
+            a {
+                text-decoration: none;
+            }
+        </style>
+
+        <!--
+        <nav class="usa-nav" role="navigation">
+            <button class="usa-nav__close">
+                <img src="/profiles/readyd8_gov/themes/uswds_ready/assets/img/close.svg" alt="close" />
+            </button>
+            <div class="grid-col-fill usa-banner__dropdown-language-menu tablet:grid-col-1">
+                <div class="language-switcher-language-url block block-language block-language-blocklanguage-interface" role="navigation">
+                    <div class="usa-language-container">
+                        <img src="https://www.ready.gov/profiles/readyd8_gov/themes/uswds_ready/img/world-icon-green.png" alt="world globe" />
+                    </div>
+                </div>
+            </div>
+        -->
+
+        <div class="navbar sticky-top">
+            <div class="dropdown">
+                <button class="dropbtn">Disaster and Emergencies
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="{% url 'floods' %}">Floods</a>
+                    <a href="{% url 'drought' %}">Drought</a>
+                    <a href="#">Attacks in Public Places</a>
+                    <a href="{% url 'pandemics' %}">Pandemic</a>
+                    <a href="{% url 'HomeFires' %}">Home Fires</a>
+                </div>
+            </div>
+
+            <div class="dropdown">
+                <button class="dropbtn">Make Plan
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="{% url 'Get_intouch' %}">Get intouch with tech</a>
+                    <a href="{% url 'safety' %}">Safety Skills</a>
+                    <a href="#">Shelter</a>
+                    <a href="#">Financial Preparedness</a>
+                    <a href="{% url 'Fire_escape_plan' %}">Home Fire Escape Plan</a>
+                </div>
+            </div>
+
+            <a href="{% url 'get_involved' %}">Get Involved</a>
+
+            <div class="dropdown">
+                <button class="dropbtn">Resource
+                    <i class="fa fa-caret-down"></i>
+                </button>
+                <div class="dropdown-content">
+                    <a href="{% url 'about' %}">About Us</a>
+                    <a href="{% url 'Contact' %}">Contact Us</a>
+                    <a href="https://www.dignited.com/102891/emergency-services-contacts-kenya/">Local Emergencies Contact</a>
+                </div>
+            </div>
+        </div>
+
+        <style>
+
+            .navbar {
+                overflow: hidden;
+                background-color: darkblue;
+                font-family: Arial, Helvetica, sans-serif;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+                display: flex;
+                justify-content: space-between;
+                align-items:center;
+                flex:1;
+
+            }
+            .navbar sticky {
+                overflow: hidden;
+                background-color: darkblue;
+                font-family: Arial, Helvetica, sans-serif;
+                top: 0;
+                width: 100%;
+                z-index: 1000;
+                position: sticky;
+                text-align: center;
+                margin : 20px;
+                padding: 250px
+            }
+
+            .navbar a {
+                float: left;
+                font-size: 16px;
+                color: white;
+                text-align: center;
+                padding: 14px 16px;
+                text-decoration: none;
+                margin-left: 60px;
+            }
+
+            .dropdown {
+                float: left;
+                overflow: visible;
+                z-index:999;
+            }
+
+            .dropdown {
+                float: left;
+                overflow: hidden;
+                margin-right: 60px;
+                text-align: center;
+                text-decoration: none;
+                
+
+            }
+
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .dropdown .dropbtn {
+                font-size: 16px;
+                border: none;
+                outline: none;
+                color: white;
+                padding: 14px 16px;
+                background-color: inherit;
+                font-family: inherit;
+                margin: 0;
+            }
+
+            .navbar a:hover,
+            .dropdown:hover .dropbtn {
+                background-color: green;
+            }
+
+            .navbar a:hover,
+            .dropdow:hover .dropbtn {
+                background-color: green;
+            }
+
+            .navbar a:hover,
+            .dropdown:hover .dropbt {
+                background-color: green;
+            }
+
+            .navbar a:hover,
+            .dropdow:hover .dropbt {
+                background-color: green;
+            }
+
+            .dropdown-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdow-content {
+                display: none;
+                position: absolute;
+                background-color: #f9f9f9;
+                min-width: 160px;
+                box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+                z-index: 1;
+            }
+
+            .dropdown-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdow-content a {
+                float: none;
+                color: black;
+                padding: 12px 16px;
+                text-decoration: none;
+                display: block;
+                text-align: left;
+            }
+
+            .dropdown-content a:hover {
+                background-color: #ddd;
+            }
+
+            .dropdow-content a:hover {
+                background-color: #ddd;
+            }
+
+            .dropdown:hover .dropdown-content {
+                display: block;
+            }
+
+            .dropdow:hover .dropdown-content {
+                display: block;
+            }
+        </style>
+
+        <div id="block-desktopusasearch" class="block block-block-content block-block-content8ab8e57c-75da-43cf-9111-3c89f0fd9fec">
+            <div class="layout layout--onecol">
+                <div class="layout__region layout__region--content">
+                    <div class="clearfix text-formatted field field--name-body field--type-text-with-summary field--label-hidden field__item">
+                        <div class="desktop-usa-search"></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </body>
+
+    {% block content %}
+    {% endblock %}
+
+
+
+
+
+
+
+
