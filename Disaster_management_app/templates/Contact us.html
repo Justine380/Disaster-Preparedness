@@ -1,8 +1,25 @@
       {% extends "base.html" %}
       {% block content %}
+      <style>
+        .c1 {
+       
+          background-color:#E0FFFF;
+          border-radius: 10px;
+          box-shadow: 0 0 10px rgba(0, 0, 0, 0.3);
+          padding: 250px;
+          margin: 300px;
+          margin-bottom: 10px;
+          margin-top: 0px;
+          text-align: left;
+          padding-top: 10px;"
+        }
+      </style>
         <div class="region-content desktop:grid-col-fill">
               <div class="region region-content">
         <div data-drupal-messages-fallback class="hidden"></div>
+
+        <div class="c1">
+
       <div id="block-uswds-ready-ready2017-system-main" class="block block-system block-system-main-block">
           <form class="webform-submission-form webform-submission-add-form webform-submission-contact-ready-campaign-form webform-submission-contact-ready-campaign-add-form js-webform-details-toggle webform-details-toggle usa-form" data-drupal-selector="webform-submission-contact-ready-campaign-add-form" action="/webform/contact-us" method="post" id="webform-submission-contact-ready-campaign-add-form" accept-charset="UTF-8">
 
@@ -51,8 +68,57 @@
 
           <div class="Kenya-form-group js-form-item form-item js-form-type-select form-item-county js-form-item-state">
               <label for="edit-county" class="usa-label usa-input--required js-form-required form-required">county </label>
-              <select data-drupal-selector="edit-state" id="edit-state" name="state" class="form-select required usa-select" required="required" aria-required="true"><option value="" selected="selected">- Select -</option><option value="Alabama">Alabama</option><option value="Alaska">Alaska</option><option value="American Samoa">American Samoa</option><option value="Arizona">Arizona</option><option value="Arkansas">Arkansas</option><option value="Armed Forces (Canada, Europe, Africa, or Middle East)">Armed Forces (Canada, Europe, Africa, or Middle East)</option><option value="Armed Forces Americas">Armed Forces Americas</option><option value="Armed Forces Pacific">Armed Forces Pacific</option><option value="California">California</option><option value="Colorado">Colorado</option><option value="Connecticut">Connecticut</option><option value="Delaware">Delaware</option><option value="District of Columbia">District of Columbia</option><option value="Federated States of Micronesia">Federated States of Micronesia</option><option value="Florida">Florida</option><option value="Georgia">Georgia</option><option value="Guam">Guam</option><option value="Hawaii">Hawaii</option><option value="Idaho">Idaho</option><option value="Illinois">Illinois</option><option value="Indiana">Indiana</option><option value="Iowa">Iowa</option><option value="Kansas">Kansas</option><option value="Kentucky">Kentucky</option><option value="Louisiana">Louisiana</option><option value="Maine">Maine</option><option value="Marshall Islands">Marshall Islands</option><option value="Maryland">Maryland</option><option value="Massachusetts">Massachusetts</option><option value="Michigan">Michigan</option><option value="Minnesota">Minnesota</option><option value="Mississippi">Mississippi</option><option value="Missouri">Missouri</option><option value="Montana">Montana</option><option value="Nebraska">Nebraska</option><option value="Nevada">Nevada</option><option value="New Hampshire">New Hampshire</option><option value="New Jersey">New Jersey</option><option value="New Mexico">New Mexico</option><option value="New York">New York</option><option value="North Carolina">North Carolina</option><option value="North Dakota">North Dakota</option><option value="Northern Mariana Islands">Northern Mariana Islands</option><option value="Ohio">Ohio</option><option value="Oklahoma">Oklahoma</option><option value="Oregon">Oregon</option><option value="Palau">Palau</option><option value="Pennsylvania">Pennsylvania</option><option value="Puerto Rico">Puerto Rico</option><option value="Rhode Island">Rhode Island</option><option value="South Carolina">South Carolina</option><option value="South Dakota">South Dakota</option><option value="Tennessee">Tennessee</option><option value="Texas">Texas</option><option value="Utah">Utah</option><option value="Vermont">Vermont</option><option value="Virgin Islands">Virgin Islands</option><option value="Virginia">Virginia</option><option value="Washington">Washington</option><option value="West Virginia">West Virginia</option><option value="Wisconsin">Wisconsin</option><option value="Wyoming">Wyoming</option></select>
-          </div>
+              <select data-drupal-selector="edit-state" id="edit-counties" name="counties" class="form-select required kenya-select" required="required" aria-required="true">
+                <option value="" selected="selected">- Select -</option>
+                <option value="Baringo">Baringo</option>
+                <option value="Bomet">Bomet</option>
+                <option value="Bungoma">Bungoma</option>
+                <option value="Busia">Busia</option>
+                <option value="Elgeyo-Marakwet">Elgeyo-Marakwet</option>
+                <option value="Embu">Embu</option>
+                <option value="Garissa">Garissa</option>
+                <option value="Homa Bay">Homa Bay</option>
+                <option value="Isiolo">Isiolo</option>
+                <option value="Kajiado">Kajiado</option>
+                <option value="Kakamega">Kakamega</option>
+                <option value="Kericho">Kericho</option>
+                <option value="Kiambu">Kiambu</option>
+                <option value="Kilifi">Kilifi</option>
+                <option value="Kirinyaga">Kirinyaga</option>
+                <option value="Kisii">Kisii</option>
+                <option value="Kisumu">Kisumu</option>
+                <option value="Kitui">Kitui</option>
+                <option value="Laikipia">Laikipia</option>
+                <option value="Lamu">Lamu</option>
+                <option value="Machakos">Machakos</option>
+                <option value="Makueni">Makueni</option>
+                <option value="Mandera">Mandera</option>
+                <option value="Marsabit">Marsabit</option>
+                <option value="Meru">Meru</option>
+                <option value="Migori">Migori</option>
+                <option value="Mombasa">Mombasa</option>
+                <option value="Murang'a">Murang'a</option>
+                <option value="Nairobi">Nairobi</option>
+                <option value="Nakuru">Nakuru</option>
+                <option value="Nandi">Nandi</option>
+                <option value="Narok">Narok</option>
+                <option value="Nyamira">Nyamira</option>
+                <option value="Nyandarua">Nyandarua</option>
+                <option value="Nyeri">Nyeri</option>
+                <option value="Samburu">Samburu</option>
+                <option value="Siaya">Siaya</option>
+                <option value="Taita-Taveta">Taita-Taveta</option>
+                <option value="Tana River">Tana River</option>
+                <option value="Tharaka-Nithi">Tharaka-Nithi</option>
+                <option value="Trans Nzoia">Trans Nzoia</option>
+                <option value="Turkana">Turkana</option>
+                <option value="Uasin Gishu">Uasin Gishu</option>
+                <option value="Vihiga">Vihiga</option>
+                <option value="Wajir">Wajir</option>
+                <option value="West Pokot">West Pokot</option>
+                </select>
+          </div
+          >
 
         <div class="Kenya-form-group js-form-item form-item js-form-type-textfield form-item-subject js-form-item-subject">
               <label for="edit-subject" class="Kenya-label usa-input--required js-form-required form-required">Subject </label>
@@ -103,10 +169,101 @@
 
           </div>
       </div>
+      <div class="container">
+      <div class="card">
+        <div class="inner-box" id="card">
+            <div class="card-front">
+                <h2>Contact Us</h2>
+                <form>
+                    <input type="email" class="input-box" placeholder="Enter Email Id" required>
+                    <input type="password" id="password" class="input-box" placeholder="Enter Password" required>
+                    <p id="message">Password is <span id="strength"></span></p>
+                    <button type="submit" class="submit-btn">Login</button>
+                    <input type="checkbox"><span>Remember Me</span>
+                </form>
+                <button type="button" class="btn" onclick="openRegister()">Don't have an account?</button>
+                <a href="">Forgot Password</a>
+            </div>
+          </div>
+        </div>
+
+<style>
+  *{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+}
+.container{
+    height: 100vh;
+    background-position: center;
+    background-size: cover;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: ;
+}
+.card{
+    color: blue;
+    height: 500px;
+    perspective: 1000px;
+}
+  .card h2{
+    width: 350px;
+    font-weight: bold;
+    font-size: 50px;
+    text-align: center;
+    margin-bottom: 20px;
+    margin-left: 50px
+    width: 350
+
+}
+.input-box{
+    width: 300%;
+    background: transparent;
+    border: 2px solid Green;
+    margin: 6px 0;
+    height: 55px;
+    border-radius: 20px;
+    padding: 0 10px;
+    box-sizing: border-box;
+    outline: none;
+    text-align: center;
+    color: white;
+    cursor: pointer;
+}
+::placeholder{
+    color: blue;
+    font-size: 29px;
+}
+  .card{
+    width: 350px;
+    height: 500px;
+    perspective: 1000px;
+  }
+  .card-front, .card-back{
+    position: ;
+    height: 200%;
+    background-position: center;
+    background-size: cover;
+    padding: 55px;
+    box-sizing: border-box;
+    backface-visibility: hidden;
+    border-radius: 10px;
+    
+}
+
+
+  </style>
+
+</div>
+
+
+</section>
 
 
 
       </form>
+    </div>
 
       </div>
 

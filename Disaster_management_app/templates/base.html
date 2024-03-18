@@ -10,9 +10,9 @@
 <!-- Include your CSS stylesheets or external links here -->
 <body>
     <div class="user sticky-top">
-        <h1 style="text-align:center;">
+        <h1 style="text-align:left; text-size:400px;">
             <a href="http://127.0.0.1:5000/home/" style="color:blue;">
-                <img src="{% static '/Images/Logo.webp' %}" alt="Disaster Logo" style="height: 160px; width: 160px; border-radius:50%"><br><br>
+                <img src="{% static '/Images/Logo.webp' %}" alt="Disaster Logo" style="height: 100px; width: 100px; border-radius:50%; margin-left: 3px">
                 Community-based Disaster Preparedness
             </a>
         </h1>
@@ -66,6 +66,10 @@
 
             <a href="{% url 'get_involved' %}">Get Involved</a>
 
+            {% if request.user.groups.all.0.name == 'admin' %}
+            <a href="{% url 'adminpage' %}">Adminpage</a>
+            {% endif %}
+
             <div class="dropdown">
                 <button class="dropbtn">Resource
                     <i class="fa fa-caret-down"></i>
@@ -76,6 +80,36 @@
                     <a href="https://www.dignited.com/102891/emergency-services-contacts-kenya/">Local Emergencies Contact</a>
                 </div>
             </div>
+
+            {% if user.is_authenticated %}
+            <a href="{% url 'signout' %}">Logout</a>
+            {% else %}
+            <a href="{% url 'login' %}">Login</a>
+            {% endif %}
+            
+
+
+            <div class='box4'>
+                <div >
+                    <h3>Prediction Result</h3>
+                    <div style="background-color: #f0f0f0; border-radius: 10px;">
+                        <h2>Prediction: {{prediction}}</h2>
+                        <p>{{message}} <strong style="color:brown">{{prediction}} risk is high</strong> </p>
+                    </div>
+                    {% if prediction == "Flood" %}
+                        <p>For more information on what to do, please visit: <a class="predictionbtn" href="{% url 'floods' %}">Emergency Guidelines</a></p>
+                    {% elif prediction == "Drought" %}
+                        <p>For more information on what to do, please visit: <a style="color:blue;" href="{% url 'drought' %}">Emergency Guidelines</a></p>
+                    {% elif prediction == 'Home fire' %}
+                        <p>For more information on what to do, please visit: <a class="predictionbtn" href="{% url 'HomeFires' %}">Emergency Guidelines</a></p>
+                    {% else %}
+                        <p>For more information on what to do, please visit: <a class="predictionbtn" href="{% url 'pandemics' %}">Emergency Guidelines</a></p>
+                    {% endif %}
+            
+                </div>
+            </div>
+
+
         </div>
 
         <style>
@@ -88,7 +122,6 @@
                 width: 100%;
                 z-index: 1000;
                 display: flex;
-                justify-content: space-between;
                 align-items:center;
                 flex:1;
 
@@ -182,6 +215,9 @@
                 box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
                 z-index: 1;
             }
+            *{
+                box-sizzing:border-box !important;
+            }
 
             .dropdow-content {
                 display: none;
@@ -224,6 +260,47 @@
 
             .dropdow:hover .dropdown-content {
                 display: block;
+            }
+
+            .box4{
+                width: 400px;
+                height: auto;
+                box-shadow: 2px 2px 10px black;
+                background-color: #f0f0f0;
+                position: absolute;
+                top: 9%;
+                right: 10%;
+                padding: 20px;
+                border-radius: 50px 20px 50px 20px;
+                border-left: 8px solid brown;
+                animation: animate 2s linear infinite;
+                z-index: 1000;
+            }
+            .box4 h3{
+                text-align: center;
+                color: brown;
+                font-size: 30px;
+                font-weight: bold;
+            }
+            .box4 a{
+                fon-weight: bold;
+                color: blue;
+                translations:all 0.7s ease !important; 
+            }
+            .box4 a:hover{
+                color: red !important;
+            }
+    
+            @keyframes animate{
+                0%{
+                    transform: rotate(0deg);
+                }
+                50%{
+                    transform: scale(1.1);
+                }
+                100%{
+                    transform: rotate(360deg);
+                }
             }
         </style>
 

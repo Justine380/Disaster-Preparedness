@@ -1,9 +1,8 @@
 from django.urls import path
-from .views import loginPage,registerPage,logoutUser,home,drought,floods,pandemics,HomeFires,get_involved,Get_intouch,safety,Fire_escape_plan,about,Contact
+from .views import *
 
 urlpatterns = [
     path('', loginPage, name='login'),
-    path('logout/', logoutUser, name='logoutUser'),
     path('home/', home, name='home'),
     path('register/', registerPage, name='register'),
     path('drought/',drought, name='drought'),
@@ -15,5 +14,8 @@ urlpatterns = [
     path('safety/',safety, name='safety'),
     path('Fire_escape_plan/',Fire_escape_plan, name='Fire_escape_plan'),
     path('about/',about, name='about'),
-    path('Contact/',Contact, name='Contact')
+    path('Contact/',Contact, name='Contact'),
+    path('adminpage/',adminpage, name='adminpage'),
+    path('prediction/',prediction, name='prediction'),
+    path('signout/',signout, name='signout')
 ]

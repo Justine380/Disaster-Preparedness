@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+      {% block content %}
+       
+            <div style="padding: 20px;">
+                <h1>Prediction Result</h1>
+                <div style="background-color: #f0f0f0; padding: 20px; border-radius: 10px; margin-bottom: 20px;">
+                    <h2>Prediction: {{prediction}}</h2>
+                    <p>{{message}}</p>
+                </div>
+                {% if prediction == "Flood" %}
+                    <p>For more information on what to do, please visit: <a href="{% url 'floods' %}">Emergency Guidelines</a></p>
+                {% elif prediction == "Drought" %}
+                    <p>For more information on what to do, please visit: <a href="{% url 'drought' %}">Emergency Guidelines</a></p>
+                {% elif prediction == 'Home fire' %}
+                    <p>For more information on what to do, please visit: <a href="{% url 'HomeFires' %}">Emergency Guidelines</a></p>
+                {% else %}
+                    <p>For more information on what to do, please visit: <a href="{% url 'pandemics' %}">Emergency Guidelines</a></p>
+                {% endif %}
+
+
+
+                
+
+            </div>
+      {% endblock%}

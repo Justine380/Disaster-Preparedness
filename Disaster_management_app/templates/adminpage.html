@@ -1,0 +1,118 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+<style>
+    section{
+        max-width: 1400px;
+        margin: 0 auto;
+    }
+
+    .box{
+        width: 1300px;
+        box-shadow:2px 2px 10px black;
+        padding: 10px;
+        border-radius: 10px;
+        margin-top: 50px;
+        
+    }
+    input,select{
+        width: 100%;
+        padding-left: 10px;
+        outline: none;
+        height: 40px;
+        margin-top: 10px;
+    }
+    .form-group{
+        width: 98%;
+        padding: 10px;
+        display: flex;
+        align-items: center;
+        justify-content: space-between;
+        flex-wrap: wrap;
+    }
+    .form-col{
+        width: 48%;
+    }
+    *{
+        box-sizzing: border-box;
+    }
+
+
+</style>
+
+
+<section>
+    <form action="{% url 'prediction' %}" method="post">
+        {% csrf_token %}
+            <div class="box">
+                <p><strong>Use the form below to predict the likelihood of a disaster in your area based on the following factors:</strong></p>
+                <div class="form-group">
+                    <div class="form-col">
+                        <input type="number" name="temperature" placeholder="Temperature" required>
+                    </div>
+                    <div class="form-col">
+                        <input type="number" name="humidity" placeholder="Humidity" required>
+                    </div>
+                    <div class="form-col">
+                        <input type="number" name="dewpoint" placeholder="Dew points" required>
+                    </div>
+                    <div class="form-col">
+                        <input type="text" name="name" placeholder="none" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-col">
+                        <input type="text" name="Land" placeholder="Land surface Temperature" required>
+                    </div>
+                    <div class="form-col">
+                        <input type="text" name="Low atmospheric pressure" placeholder="Low atmospheric pressure" required>
+                    </div>
+                    <div class="form-col">
+                        <input type="text" name="Streamflow and River discharge" placeholder="Streamflow and River discharge" required>
+                    </div>
+                    <div class="form-col">
+                        <input type="text" name="Unhealthy Vegetation" placeholder="Unhealthy Vegetation" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-col">
+                        <input type="text" name="smoking indoors" placeholder="smoking indoors" required>
+                    </div>
+                    <div class="form-col">
+                        <input type="text" name="Smoke Detectors" placeholder="Smoke Detectors" required>
+                    </div>
+                    <div class="form-col">
+                        <input type="text" name="Fire Extinguishers" placeholder="Fire Extinguishers:" required>
+                    </div>
+                    <div class="form-col">
+                        <input type="text" name="Open flame" placeholder="Open flame" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-col">
+                        <input type="text" name="High Transmission rate" placeholder="High Transmission rate" required>
+                    </div>
+                    <div class="form-col">
+                        <input type="text" name="High hospitalized rate" placeholder="High hospitalized rate:" required>
+                    </div>
+                    <div class="form-col">
+                        <input type="text" name="High Number of cases" placeholder="High Number of cases" required>
+                    </div>
+                    <div class="form-col">
+                        <input type="text" name="High Transmission rate" placeholder="High Transmission rate:" required>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="form-col" style="width:100%;">
+                        <input type="submit" value="Predict" style="background:aqua;outline:none;border:none;border-radius:10px" >
+                    </div>
+                </div>
+                </form>
+            </div>
+</div>
+    </form>
+</section>
+
+
+{% endblock %}
